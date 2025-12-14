@@ -1,0 +1,4 @@
+//Q1. Write a Java program to convert seconds to hours, minutes and seconds.  
+
+import java.util.*;
+public class ConSecHrMin
