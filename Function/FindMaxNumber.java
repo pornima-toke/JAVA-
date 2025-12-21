@@ -1,8 +1,7 @@
-//Find Maximum of Two Numbers Write a function findMax(int a, int b) that returns
-//  the maximum of two numbers. Call this function in main() and print the result.
+//Find Maximum of Two Numbers Write a function findMax(int a, int b) that returns the maximum of two numbers. Call this function in main() and print the result.
 
 import java.util.*;
-public class MaxNumber {
+public class FindMaxNumber {
 	    // Function to return maximum of two numbers
 	public static int findMax(int a, int b) {
 		if(a > b) {
