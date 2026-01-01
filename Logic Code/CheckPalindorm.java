@@ -5,23 +5,22 @@ public class CheckPalindorm
 	public static void main(String x[])
 	{
 		Scanner sc = new Scanner (System.in);
-		System.out.println("Enter the number:");
+		System.out.println("Enter the number");
 		int n = sc.nextInt();
+		int temp = n;
 		int rev = 0;
-		int store = n;
 		while(n > 0)
 		{
 			int digit = n % 10;
 			rev = rev * 10 + digit;
-			n = n /10;
+			n = n / 10;
 		}
-		if(store == rev)
+		if(temp == rev)
 		{
-            System.out.println("Palindrome number");
-        }
-		else
-		{
-            System.out.println("Not a palindrome number");
+			System.out.println("Palindrom");
+		}
+		else{
+			System.out.println("Not Palindrom");
 		}
 	}
 }

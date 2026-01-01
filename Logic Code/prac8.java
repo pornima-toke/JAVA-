@@ -7,11 +7,15 @@ public class prac8
 		System.out.println("Enter the number");
 		int n = sc.nextInt();
 		int i = 1;
-		for(int i = 1; i <= n; i++)
+		//for(int i = 1; i <= n; i++)
+		while( i <= n)
 		{
-			i % 2 == 0;
+			if(i % 2 == 0)
+			{
+		      System.out.println(i + " ");
+			}
+			i++;
 		}
-		System.out.println(i + " ");
 	}
 }
 	/*	
