@@ -1,5 +1,6 @@
 //Q17. Write a java program to find the first factors of a number.
 import java.util.*;
+
 public class Factor
 {
 	public static void main(String x[])

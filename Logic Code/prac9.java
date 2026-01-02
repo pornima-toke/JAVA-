@@ -8,11 +8,19 @@ public class prac9
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Enter the number");
 		int n = sc.nextInt();
-		int i = 1;
-		while(i <= n)
+		//int i = 1;
+		int count = 0;
+		while(0 < n)
 		{
-			System.out.println(i);
-			i++;
-		}
-	}
+	/*for(int i = 1; i <=n; i++)
+		{
+			count++;
+			n=n/10;
+		}*/
+            n = n / 10;
+            count++;
+        }
+
+        System.out.println(count);
+    }
 }

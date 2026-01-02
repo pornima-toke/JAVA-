@@ -24,6 +24,7 @@
             System.out.println(no + " is not an Armstrong number");
     }
 
+
     public static void main(String[] args) {
         Armstrong a = new Armstrong();
         a.setNum(153);
