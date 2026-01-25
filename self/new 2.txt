@@ -1,0 +1,149 @@
+🧠 Array Problem Approaches
+1️⃣ Brute Force
+for(int i=0;i<n;i++)
+  for(int j=i;j<n;j++)
+    System.out.println(arr[j]);
+
+
+👉 सर्व combinations check करतो
+
+2️⃣ Sliding Window
+int sum=0;
+for(int i=0;i<k;i++) sum+=arr[i];
+for(int i=k;i<n;i++){
+  sum += arr[i] - arr[i-k];
+}
+
+
+👉 Subarray sum / max sum
+
+3️⃣ Two Pointer
+int l=0,r=n-1;
+while(l<r){
+  if(arr[l]+arr[r]==key) break;
+  else if(arr[l]+arr[r]<key) l++;
+  else r--;
+}
+
+
+👉 Pair sum / min window
+
+4️⃣ Hashing
+HashMap<Integer,Integer> map=new HashMap<>();
+for(int x:arr)
+  map.put(x,map.getOrDefault(x,0)+1);
+
+
+👉 Frequency / duplicate
+
+🔍 Searching Algorithms
+🔹 Linear Search
+for(int i=0;i<n;i++)
+  if(arr[i]==key) break;
+
+
+👉 Sorted / unsorted array
+
+🔹 Binary Search
+int l=0,r=n-1;
+while(l<=r){
+  int m=(l+r)/2;
+  if(arr[m]==key) break;
+  else if(key<arr[m]) r=m-1;
+  else l=m+1;
+}
+
+
+👉 Only sorted array
+
+🔃 Sorting Algorithms
+🔹 Selection Sort
+for(int i=0;i<n;i++){
+  int min=i;
+  for(int j=i+1;j<n;j++)
+    if(arr[j]<arr[min]) min=j;
+  int t=arr[i]; arr[i]=arr[min]; arr[min]=t;
+}
+
+🔹 Bubble Sort (with flag)
+for(int i=0;i<n;i++){
+  boolean flag=false;
+  for(int j=0;j<n-i-1;j++)
+    if(arr[j]>arr[j+1]){
+      int t=arr[j]; arr[j]=arr[j+1]; arr[j+1]=t;
+      flag=true;
+    }
+  if(!flag) break;
+}
+
+🧮 2D Array (Matrix)
+Declare & Input
+int a[][]=new int[3][3];
+
+Matrix Sum
+sum += a[i][j];
+
+Transpose
+b[j][i]=a[i][j];
+
+Matrix Addition
+c[i][j]=a[i][j]+b[i][j];
+
+Matrix Multiplication
+c[i][j]+=a[i][k]*b[k][j];
+
+🧩 Jagged Array
+int a[][]=new int[3][];
+a[0]=new int[2];
+a[1]=new int[4];
+a[2]=new int[1];
+
+
+👉 Each row different size
+
+🧱 STACK (LIFO)
+Stack Creation
+Stack<Integer> st=new Stack<>();
+
+Operations
+st.push(10);   // insert
+st.pop();      // remove
+st.peek();     // top
+st.search(10); // position
+
+
+👉 LIFO → Last In First Out
+
+🚶 QUEUE (FIFO)
+Queue Creation
+Queue<Integer> q=new LinkedList<>();
+
+Operations
+q.add(10);    // insert
+q.remove();   // delete
+q.peek();     // front
+
+
+👉 FIFO → First In First Out
+
+✅ ONE-LINE EXAM POINTS
+
+Brute Force → slow but easy
+
+Sliding Window → O(n)
+
+Two Pointer → sorted / window problems
+
+Hashing → fast lookup
+
+Linear Search → O(n)
+
+Binary Search → O(log n)
+
+Selection Sort → minimum swap
+
+Bubble Sort → adjacent swap
+
+Stack → LIFO
+
+Queue → FIFO
